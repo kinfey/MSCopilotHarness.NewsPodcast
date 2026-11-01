@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Meridian 24 — independent, factual bilingual China and international news. Updated every half hour.">
+  <meta property="og:title" content="Meridian 24 · 全球新闻电台">
+  <meta property="og:description" content="Two hosts. Two languages. Around-the-clock China and international news, with clickable stories and sources.">
+  <title>Meridian 24 · 全球新闻电台</title>
+  <link rel="stylesheet" href="styles.css?v=9">
+  <script type="module" src="app.js?v=10"></script>
+</head>
+<body>
+  <header class="masthead">
+    <a class="brand" href="./" aria-label="Meridian 24"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span> Meridian<span class="brand-number">24</span></a>
+    <span class="masthead-note" data-i18n="tagline">新闻不间断，视野无边界。</span>
+    <div class="header-actions">
+      <span class="on-air"><i></i><span id="station-state">ON AIR</span></span>
+      <button id="language" class="language-button" aria-label="Switch programme language">中文 <span>/ EN</span></button>
+    </div>
+  </header>
+  <nav class="station-nav" aria-label="Programme navigation"><a href="#discover" data-i18n="discover">发现节目</a><a href="#now-playing" data-i18n="listenNow">现在收听</a><a href="#archive" data-i18n="archive">新闻档案</a><a href="#architecture" data-i18n="architecture">系统架构</a></nav>
+  <main>
+    <section class="hero" id="discover">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="small-line"></span><span data-i18n="eyebrow">你的 24 小时全球新闻台</span></div>
+        <h1 data-i18n="hero">世界在转动。<br><em>听见每一次变化。</em></h1>
+        <p class="hero-description" data-i18n="description">一男一女两位主持，全天候为你连贯播报中国国内与国际新闻。以事实为主，以来源为据。</p>
+        <p class="timezone-label" id="timezone"></p>
+        <div class="hero-facts"><span><b>24/7</b><small data-i18n="continuous">全天候收听</small></span><span><b>30 MIN</b><small data-i18n="refresh">每半小时更新</small></span><span><b>2 LANG</b><small data-i18n="bilingual">中英双语节目</small></span></div>
+        <div class="source-strip"><span data-i18n="sourceLabel">新闻检索来源</span><strong data-agency="xinhua">新华社</strong><strong data-agency="ap">美联社 AP</strong><strong data-agency="afp">法新社 AFP</strong><strong data-agency="bloomberg">彭博社 Bloomberg</strong></div>
+      </div>
+      <div class="globe-stage" aria-hidden="true">
+        <div class="globe-orbit orbit-one"></div><div class="globe-orbit orbit-two"></div>
+        <canvas id="globe"></canvas>
+        <span class="globe-label label-top">LIVE FROM A CONNECTED WORLD</span>
+        <span class="globe-label label-bottom">31° N &nbsp; 121° E <span>● GLOBAL SIGNAL</span></span>
+        <div class="globe-point point-one">BEIJING <i></i></div><div class="globe-point point-two"><i></i> NEW YORK</div>
+      </div>
+    </section>
+    <section class="broadcast-panel" id="now-playing" aria-labelledby="programme-title">
+      <div class="programme">
+        <div class="programme-main">
+          <div class="programme-cover" aria-hidden="true"><span class="cover-orbit"></span><span class="cover-number">24</span><span class="cover-name">MERIDIAN</span><span class="cover-caption">NEWS PODCAST</span></div>
+          <div class="programme-copy">
+        <div class="programme-heading">
+          <span class="live-pill" id="mode" data-i18n="latest">最新一期</span>
+          <span class="edition-time" id="edition-time">—</span>
+          <span class="edition-zone" data-i18n="localZone">本地时区</span>
+        </div>
+        <h2 id="programme-title" data-i18n="waiting">正在连接新闻台…</h2>
+        <p id="status" class="status" role="status" aria-live="polite" data-i18n="loading">正在获取节目列表</p>
+        <p id="legacy-notice" class="status" hidden></p>
+          </div>
+        </div>
+        <div class="hosts" id="hosts"></div>
+        <div class="programme-footer"><button id="go-live" class="text-button" data-i18n="returnLive">回到最新节目 ↗</button><div class="share"><span data-i18n="share">分享节目</span><a id="share-x" target="_blank" rel="noopener noreferrer" aria-label="Share on X">𝕏</a><a id="share-facebook" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook">f</a><button id="share-native" class="icon-button" aria-label="复制节目链接">↗</button></div></div>
+      </div>
+      <aside class="rundown">
+        <div class="section-label"><span data-i18n="rundown">本期节目</span><span class="mono">THE RUNDOWN</span></div>
+        <div id="chapters" class="chapters"></div>
+        <p class="next-update"><i></i><span data-i18n="next">下次更新</span> <b id="next-update">—</b></p>
+      </aside>
+    </section>
+    <section class="archive" id="archive" aria-labelledby="archive-title">
+      <div class="archive-header"><div><span class="eyebrow" data-i18n="onDemand">随时回听</span><h2 id="archive-title" data-i18n="archive">新闻档案</h2></div><label class="date-picker"><span data-i18n="date">选择日期</span><input id="archive-date" type="date" aria-label="选择回听日期"></label></div>
+      <div id="archive-list" class="archive-list"><p data-i18n="empty">暂无已发布节目。</p></div>
+      <p class="status" data-i18n="retention">仅保留北京时间当天节目；00:00 清理前日目录、音频与制作文件。显示时间仍使用你的本地时区。</p>
+    </section>
+    <section class="architecture" id="architecture" aria-labelledby="architecture-title">
+      <span class="eyebrow">BEHIND THE BROADCAST</span>
+      <h2 id="architecture-title" data-i18n="architecture">系统架构</h2>
+      <p class="architecture-intro" data-i18n="architectureIntro">沿数据节点查看整条链路：定时触发 → 托管 Microsoft Copilot Harness 与子 agent → 沙箱脚本 → 双语音频 → Blob → 网页收听。</p>
+      <div id="architecture-content"></div>
+    </section>
+    <section class="editorial-note"><span class="note-mark">◎</span><div><h3 data-i18n="editorial">先整理事实，再连贯播报。</h3><p data-i18n="disclosure">本台为独立 AI 生成新闻播客，与上述通讯社无隶属关系。中国国内与国际报道按主题整理、补充检索后生成原创事实摘要，不播报体育，不以评论填补资料缺口。热点排序参考检索相关性、时效和跨来源覆盖，不代表真实收听热度。</p><p id="source-gaps"></p></div><span class="mono">POWERED BY<br>MICROSOFT FOUNDRY<br>MAI VOICE 2.1</span></section>
+  </main>
+  <footer><a class="brand footer-brand" href="./">Meridian<span class="brand-number">24</span></a><span data-i18n="footer">世界的此刻，与你同频。</span><time id="clock"></time></footer>
+  <section class="playback-dock" aria-label="Podcast player">
+    <div class="dock-inner">
+      <div class="dock-programme"><span class="dock-art" aria-hidden="true">24</span><div><strong id="dock-title" data-i18n="waiting">正在连接新闻台…</strong><small id="dock-edition">Meridian 24</small></div></div>
+      <div class="player">
+        <button id="play" class="play-button" aria-label="播放" disabled><span id="play-icon">▶</span></button>
+        <div class="player-progress"><div class="waveform" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <input id="seek" type="range" min="0" max="100" value="0" step="0.1" aria-label="播放进度" disabled>
+          <div class="timecodes"><span id="elapsed">00:00</span><span id="duration">00:00</span></div>
+        </div>
+        <button id="mute" class="icon-button" aria-label="静音">◖))</button>
+      </div>
+    </div>
+  </section>
+  <div class="ticker" aria-label="新闻标题与时间"><span class="ticker-label"><i></i><span data-i18n="headlines">新闻速览</span></span><div class="ticker-window"><div id="ticker-track" class="ticker-track"><span data-i18n="empty">暂无已发布节目。</span></div></div><button id="ticker-pause" aria-label="暂停新闻滚动">Ⅱ</button></div>
+  <audio id="audio" preload="metadata" playsinline></audio>
+</body>
+</html>

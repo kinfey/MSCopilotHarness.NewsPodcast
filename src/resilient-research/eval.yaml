@@ -1,0 +1,18 @@
+name: newsradio24-quality
+agent:
+    name: newsradio24
+    kind: hosted
+    config: .agent_configs/baseline/metadata.yaml
+options:
+    eval_model: gpt-6.1-sol
+max_samples: 15
+generation_instruction: >-
+    Evaluate neutral factual bilingual domestic-China and international bulletins
+    against supplied evidence, not the judge's training cutoff. Check topic grouping,
+    WebIQ expansion of sparse leads, exclusion of sports and opinion padding,
+    ordered story completion, attributed background, Chinese/English consistency,
+    exactly two host roles, opening greetings and self-introductions, polite sign-offs,
+    continuity, measured per-story audio positions, separate article links, listener-local
+    timezone display, measured duration, Blob recovery and future-slot rejection.
+    Verify source-diverse candidate discovery, priority for verified AP/AFP/Bloomberg
+    international stories, per-agency story caps and one primary link with collapsed citations.

@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="940" viewBox="0 0 1280 940" role="img" aria-labelledby="title desc">
+  <title id="title">News station architecture with Microsoft Copilot Harness</title>
+  <desc id="desc">Foundry Routine invokes a Hosted orchestrator. Microsoft Copilot Harness coordinates the parent editor, native subagents and sandbox. External Hosted adapters run WebIQ and audio production. Private checkpoints and public programmes use separate Blob boundaries.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#5275a5"/></marker>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #20344e; }
+      .title { font-size: 32px; font-weight: 700; }
+      .heading { font-size: 22px; font-weight: 600; }
+      .body { font-size: 18px; }
+      .small { font-size: 15px; fill: #526477; }
+      .edge { fill: none; stroke: #5275a5; stroke-width: 2; marker-end: url(#arrow); }
+      .loop { stroke-dasharray: 7 5; }
+      .box { fill: #ffffff; stroke: #bfcee1; stroke-width: 1.5; }
+    </style>
+  </defs>
+  <rect width="1280" height="940" rx="20" fill="#f8fbff"/>
+  <text x="48" y="62" class="title">Give the newsroom a managed editor</text>
+  <text x="48" y="99" class="body">Microsoft Copilot Harness runs editorial work; Hosted services run external tools and audio production.</text>
+  <rect x="48" y="150" width="255" height="105" rx="14" class="box"/>
+  <text x="70" y="183" class="heading">Foundry Routine</text>
+  <text x="70" y="213" class="body">Every half hour, Beijing time</text>
+  <text x="70" y="239" class="small">:00 / :30 · manual extras</text>
+  <rect x="445" y="150" width="360" height="105" rx="14" class="box"/>
+  <text x="468" y="183" class="heading">Hosted orchestrator</text>
+  <text x="468" y="213" class="body">Task IDs, leases and checkpoints</text>
+  <text x="468" y="239" class="small">Invoke the editor; execute external tools</text>
+  <rect x="975" y="150" width="257" height="105" rx="14" class="box"/>
+  <text x="994" y="183" class="heading">Private Blob</text>
+  <text x="994" y="213" class="body">Evidence / scripts / WAVs</text>
+  <text x="994" y="239" class="small">Checkpoints and real tool events</text>
+  <path d="M303 202H445" class="edge"/>
+  <text x="325" y="184" class="small">slot / invocation</text>
+  <path d="M805 202H975" class="edge"/>
+  <text x="831" y="184" class="small">Save progress</text>
+  <rect x="48" y="325" width="715" height="390" rx="18" fill="#f8f3ff" stroke="#bba2dc" stroke-width="2"/>
+  <text x="72" y="361" class="heading">Microsoft Copilot Harness</text>
+  <text x="72" y="387" class="small">Foundry-managed runtime · isolated conversation workspace</text>
+  <rect x="243" y="410" width="326" height="82" rx="12" class="box"/>
+  <text x="265" y="443" class="heading">Parent editor · GPT-6.1-sol</text>
+  <text x="265" y="475" class="small">Bound tasks → merge results → next step</text>
+  <path d="M625 255V297H406V410" class="edge"/>
+  <text x="438" y="292" class="small">Responses API / editorial request</text>
+  <path d="M406 492V518H170V548" class="edge"/>
+  <path d="M406 518V548" class="edge"/>
+  <path d="M406 518H642V548" class="edge"/>
+  <rect x="72" y="548" width="200" height="82" rx="10" class="box"/>
+  <rect x="306" y="548" width="200" height="82" rx="10" class="box"/>
+  <rect x="540" y="548" width="199" height="82" rx="10" class="box"/>
+  <text x="92" y="580" class="heading">China research</text>
+  <text x="92" y="610" class="small">Events, facts and gaps</text>
+  <text x="326" y="580" class="heading">World research</text>
+  <text x="326" y="610" class="small">Sources and citations</text>
+  <text x="560" y="580" class="heading">Fact verification</text>
+  <text x="560" y="610" class="small">Evidence / consistency</text>
+  <path d="M172 630V644H406V658" class="edge"/>
+  <path d="M640 630V644H406" fill="none" stroke="#5275a5" stroke-width="2"/>
+  <path d="M406 630V644" fill="none" stroke="#5275a5" stroke-width="2"/>
+  <rect x="72" y="658" width="667" height="40" rx="10" fill="#eee4fa"/>
+  <text x="91" y="684" class="body">Parent sandbox: shell + file tools → JSON checks and script assembly</text>
+  <rect x="830" y="325" width="402" height="145" rx="14" class="box"/>
+  <text x="853" y="360" class="heading">External: Hosted → WebIQ</text>
+  <text x="853" y="392" class="body">collect_news / expand_news</text>
+  <text x="853" y="421" class="small">Public agency search and focused expansion</text>
+  <text x="853" y="449" class="small">Requests / evidence; keys stay outside the sandbox</text>
+  <path d="M763 400H830" class="edge loop"/>
+  <path d="M830 441H763" class="edge loop"/>
+  <rect x="830" y="510" width="402" height="205" rx="14" class="box"/>
+  <text x="853" y="549" class="heading">Hosted audio and publication</text>
+  <text x="853" y="583" class="body">Schema / citations / execution gates</text>
+  <text x="853" y="618" class="body">MAI Voice 2.1 → per-anchor WAVs</text>
+  <text x="853" y="653" class="body">FFprobe / FFmpeg → AAC / MP4</text>
+  <text x="853" y="687" class="small">Measured story timing; bulletin / section ≤20 min</text>
+  <path d="M763 679H798V601H830" class="edge"/>
+  <text x="503" y="743" class="small">Editorial output and audit events return to Hosted for validation</text>
+  <rect x="48" y="790" width="520" height="90" rx="14" fill="#eef6ff" stroke="#9bbfea"/>
+  <text x="72" y="825" class="heading">Public Blob: bilingual MP4s + catalogues</text>
+  <text x="72" y="856" class="small">Publish only when both languages finish; raw evidence stays private</text>
+  <rect x="830" y="790" width="402" height="90" rx="14" class="box"/>
+  <text x="853" y="825" class="heading">Web station · HTML / JS / CSS3</text>
+  <text x="853" y="856" class="small">Playback / story seeking / sources / local time</text>
+  <path d="M1031 715V767H308V790" class="edge"/>
+  <path d="M568 835H830" class="edge"/>
+  <text x="617" y="816" class="small">Catalogue + audio + story timing</text>
+  <text x="48" y="915" class="small">Subagents are bounded runtime roles, not three permanent deployments. Workspaces are not archives; expired programmes are removed at Beijing midnight.</text>
+</svg>

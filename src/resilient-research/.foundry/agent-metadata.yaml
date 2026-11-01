@@ -1,0 +1,9 @@
+azd:
+  environmentName: newsradio24-dev
+  service: newsradio24
+pendingGeneration:
+  generationSource: synthetic
+  datasetGenerationJobId: datagen-dadedf5b966944fa948ca5a011911c3c
+  evaluatorGenerationJobId: evaluatorgen-newsradio24-quality-v1-ef29d115
+  configFile: ../eval.yaml
+  status: submitted

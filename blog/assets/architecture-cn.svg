@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="940" viewBox="0 0 1280 940" role="img" aria-labelledby="title desc">
+  <title id="title">用 Microsoft Copilot Harness 构建新闻台的系统架构</title>
+  <desc id="desc">Foundry Routine 触发 Hosted 服务。Microsoft Copilot Harness 管理主编辑、内置子任务和沙箱。WebIQ 与音频制作在外部 Hosted 服务执行，私有检查点与公开成品分别存入 Blob，网页只读取公开节目。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#5275a5"/></marker>
+    <style>
+      text { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; fill: #20344e; }
+      .title { font-size: 32px; font-weight: 700; }
+      .heading { font-size: 22px; font-weight: 600; }
+      .body { font-size: 18px; }
+      .small { font-size: 15px; fill: #526477; }
+      .edge { fill: none; stroke: #5275a5; stroke-width: 2; marker-end: url(#arrow); }
+      .loop { stroke-dasharray: 7 5; }
+      .box { fill: #ffffff; stroke: #bfcee1; stroke-width: 1.5; }
+    </style>
+  </defs>
+  <rect width="1280" height="940" rx="20" fill="#f8fbff"/>
+  <text x="48" y="62" class="title">让编辑部有一位托管的“主编”</text>
+  <text x="48" y="99" class="body">Microsoft Copilot Harness 负责编辑执行；Hosted 服务负责外部工具与音频制作。</text>
+  <rect x="48" y="150" width="255" height="105" rx="14" class="box"/>
+  <text x="70" y="183" class="heading">Foundry Routine</text>
+  <text x="70" y="213" class="body">北京时间每半小时触发</text>
+  <text x="70" y="239" class="small">:00 / :30 · 支持手动加更</text>
+  <rect x="445" y="150" width="360" height="105" rx="14" class="box"/>
+  <text x="468" y="183" class="heading">Hosted 任务协调服务</text>
+  <text x="468" y="213" class="body">任务 ID、租约、检查点与恢复</text>
+  <text x="468" y="239" class="small">调用编辑 agent，执行外部工具请求</text>
+  <rect x="975" y="150" width="257" height="105" rx="14" class="box"/>
+  <text x="994" y="183" class="heading">私有 Blob</text>
+  <text x="994" y="213" class="body">证据 / 脚本 / WAV</text>
+  <text x="994" y="239" class="small">检查点与真实工具执行记录</text>
+  <path d="M303 202H445" class="edge"/>
+  <text x="325" y="184" class="small">slot / invocation</text>
+  <path d="M805 202H975" class="edge"/>
+  <text x="831" y="184" class="small">持久化进度</text>
+  <rect x="48" y="325" width="715" height="390" rx="18" fill="#f8f3ff" stroke="#bba2dc" stroke-width="2"/>
+  <text x="72" y="361" class="heading">Microsoft Copilot Harness</text>
+  <text x="72" y="387" class="small">Foundry 托管执行边界 · 隔离的会话工作区</text>
+  <rect x="243" y="410" width="326" height="82" rx="12" class="box"/>
+  <text x="265" y="443" class="heading">主编辑 · GPT-6.1-sol</text>
+  <text x="265" y="475" class="small">委派有界任务 → 合并结果 → 决定下一步</text>
+  <path d="M625 255V297H406V410" class="edge"/>
+  <text x="438" y="292" class="small">Responses API / 编辑请求</text>
+  <path d="M406 492V518H170V548" class="edge"/>
+  <path d="M406 518V548" class="edge"/>
+  <path d="M406 518H642V548" class="edge"/>
+  <rect x="72" y="548" width="200" height="82" rx="10" class="box"/>
+  <rect x="306" y="548" width="200" height="82" rx="10" class="box"/>
+  <rect x="540" y="548" width="199" height="82" rx="10" class="box"/>
+  <text x="92" y="580" class="heading">国内研究子任务</text>
+  <text x="92" y="610" class="small">事件、事实、资料缺口</text>
+  <text x="326" y="580" class="heading">国际研究子任务</text>
+  <text x="326" y="610" class="small">跨社报道、主题与引用</text>
+  <text x="560" y="580" class="heading">事实核验子任务</text>
+  <text x="560" y="610" class="small">证据、日期、中英一致性</text>
+  <path d="M172 630V644H406V658" class="edge"/>
+  <path d="M640 630V644H406" fill="none" stroke="#5275a5" stroke-width="2"/>
+  <path d="M406 630V644" fill="none" stroke="#5275a5" stroke-width="2"/>
+  <rect x="72" y="658" width="667" height="40" rx="10" fill="#eee4fa"/>
+  <text x="91" y="684" class="body">主编辑沙箱：Shell + 文件工具 → JSON 检查与脚本组装</text>
+  <rect x="830" y="325" width="402" height="145" rx="14" class="box"/>
+  <text x="853" y="360" class="heading">外部工具：Hosted → WebIQ</text>
+  <text x="853" y="392" class="body">collect_news / expand_news</text>
+  <text x="853" y="421" class="small">四社公开检索、定向补搜、同会话回传</text>
+  <text x="853" y="449" class="small">请求 / 证据结果；密钥不进入沙箱</text>
+  <path d="M763 400H830" class="edge loop"/>
+  <path d="M830 441H763" class="edge loop"/>
+  <rect x="830" y="510" width="402" height="205" rx="14" class="box"/>
+  <text x="853" y="549" class="heading">Hosted 音频与发布服务</text>
+  <text x="853" y="583" class="body">Pydantic / 引用 / 执行记录校验</text>
+  <text x="853" y="618" class="body">MAI Voice 2.1 → 主持逐段 WAV</text>
+  <text x="853" y="653" class="body">FFprobe / FFmpeg → AAC / MP4</text>
+  <text x="853" y="687" class="small">实测新闻时间轴；整期与板块均 ≤20 分钟</text>
+  <path d="M763 679H798V601H830" class="edge"/>
+  <text x="503" y="743" class="small">编辑结果与审计记录离开沙箱，交给 Hosted 校验</text>
+  <rect x="48" y="790" width="520" height="90" rx="14" fill="#eef6ff" stroke="#9bbfea"/>
+  <text x="72" y="825" class="heading">公开 Blob：双语 MP4 + 节目目录</text>
+  <text x="72" y="856" class="small">两种语言全部完成才更新目录，不公开原始证据</text>
+  <rect x="830" y="790" width="402" height="90" rx="14" class="box"/>
+  <text x="853" y="825" class="heading">单页新闻台 · HTML / JS / CSS3</text>
+  <text x="853" y="856" class="small">播放 / 逐条跳转 / 来源链接 / 用户本地时间</text>
+  <path d="M1031 715V767H308V790" class="edge"/>
+  <path d="M568 835H830" class="edge"/>
+  <text x="617" y="816" class="small">目录 + 音频 + 新闻定位</text>
+  <text x="48" y="915" class="small">子 agent 是按需委派的逻辑职责，不是三个常驻部署。工作区不是永久档案；过期节目按北京时间跨日清理。</text>
+</svg>

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1100" viewBox="0 0 1200 1100" role="img" aria-labelledby="title desc">
+  <title id="title">News station data flow from evidence to audio</title>
+  <desc id="desc">A slot becomes public evidence, verified briefs, bilingual scripts, measured audio, published catalogues and browser playback. Research gaps trigger a Hosted WebIQ expansion loop. Execution, citation and duration gates protect publication. Beijing midnight expires the previous day's content.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#4678b8"/></marker>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #20344e; }
+      .title { font-size: 30px; font-weight: 700; }
+      .heading { font-size: 22px; font-weight: 600; }
+      .body { font-size: 18px; }
+      .small { font-size: 15px; fill: #526477; }
+      .data { fill: #eef6ff; stroke: #9bbfea; stroke-width: 1.5; }
+      .edge { fill: none; stroke: #4678b8; stroke-width: 2; marker-end: url(#arrow); }
+      .loop { stroke: #9266bd; stroke-dasharray: 7 5; }
+    </style>
+  </defs>
+  <rect width="1200" height="1100" rx="20" fill="#f8fbff"/>
+  <text x="48" y="54" class="title">Don't just ask for a news script. Move data through a newsroom.</text>
+  <text x="48" y="91" class="body">Blue nodes are saved, inspectable data. Purple dashed arrows are the research loop.</text>
+  <rect x="48" y="125" width="682" height="85" rx="16" class="data"/>
+  <text x="72" y="159" class="heading">D01 · Slot and task input</text>
+  <text x="72" y="189" class="body">slot + invocation_id → Hosted idempotent task / checkpoint recovery</text>
+  <path d="M389 210V250" class="edge"/>
+  <rect x="48" y="250" width="682" height="95" rx="16" class="data"/>
+  <text x="72" y="286" class="heading">D02 · Public-report evidence package</text>
+  <text x="72" y="318" class="body">evidence.json · evidence ID / agency / URL / source date / usable facts</text>
+  <path d="M389 345V390" class="edge"/>
+  <rect x="48" y="390" width="682" height="100" rx="16" class="data"/>
+  <text x="72" y="426" class="heading">D03 · Topics → verified factual briefs</text>
+  <text x="72" y="458" class="body">topics.json → briefs.json · topic order, citations, facts and research gaps</text>
+  <rect x="830" y="335" width="322" height="150" rx="16" fill="#f8f3ff" stroke="#bba2dc"/>
+  <text x="850" y="371" class="heading">Missing useful detail?</text>
+  <text x="850" y="403" class="body">expand_news → WebIQ</text>
+  <text x="850" y="435" class="small">Hosted search, outside the sandbox</text>
+  <text x="850" y="461" class="small">expanded-evidence.json returns to D02</text>
+  <path d="M730 440H830" class="edge loop"/>
+  <path d="M830 365H790V297H730" class="edge loop"/>
+  <text x="754" y="422" class="small">Gaps</text>
+  <path d="M389 490V535" class="edge"/>
+  <rect x="48" y="535" width="682" height="100" rx="16" class="data"/>
+  <text x="72" y="571" class="heading">D04 · Chinese and English scripts, same facts</text>
+  <text x="72" y="603" class="body">cn/script.json → en/script.json · speaker / text / topic_id / citations</text>
+  <rect x="830" y="535" width="322" height="200" rx="16" fill="#fff" stroke="#bfcee1"/>
+  <text x="850" y="573" class="heading">Publication gates</text>
+  <text x="850" y="609" class="body">Actual task / shell execution records</text>
+  <text x="850" y="641" class="body">Citations, agency balance, schemas</text>
+  <text x="850" y="673" class="body">Bulletin / section ≤1,200 seconds</text>
+  <text x="850" y="705" class="body">Both languages complete first</text>
+  <path d="M389 635V680" class="edge"/>
+  <rect x="48" y="680" width="682" height="100" rx="16" class="data"/>
+  <text x="72" y="716" class="heading">D05 · Anchor tracks → audio and measured timeline</text>
+  <text x="72" y="748" class="body">MAI WAV → Wei 1.25x → FFprobe / FFmpeg → AAC / MP4</text>
+  <path d="M389 780V825" class="edge"/>
+  <rect x="48" y="825" width="682" height="100" rx="16" class="data"/>
+  <text x="72" y="861" class="heading">D06 · Bilingual public output and today's catalogues</text>
+  <text x="72" y="893" class="body">media/cn|en/YYYYMMDD/HHMM.mp4 + scheduled / manual catalogues</text>
+  <rect x="830" y="825" width="322" height="200" rx="16" fill="#fffbf1" stroke="#e5c58d"/>
+  <text x="850" y="862" class="heading">Beijing midnight · 00:00</text>
+  <text x="850" y="897" class="body">Today's date, not a rolling 24 hours</text>
+  <text x="850" y="931" class="body">Prune catalogues + expired files</text>
+  <text x="850" y="965" class="body">Old jobs cannot recreate old content</text>
+  <text x="850" y="999" class="small">No new-day audio yet → wait, not yesterday</text>
+  <path d="M730 879H830" class="edge"/>
+  <path d="M389 925V970" class="edge"/>
+  <rect x="48" y="970" width="682" height="75" rx="16" class="data"/>
+  <text x="72" y="1001" class="heading">D07 · Web player, headline ticker and source links</text>
+  <text x="72" y="1031" class="small">45-second refresh · seek to measured story starts · show times in the listener's zone</text>
+  <text x="48" y="1080" class="small">Microsoft Copilot Harness runs editorial execution. Hosted retains deterministic gates, audio production, storage and daily retention.</text>
+</svg>
